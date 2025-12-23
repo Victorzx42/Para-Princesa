@@ -10,16 +10,17 @@
       font-family: Arial, sans-serif;
       color: #1b4332;
       margin: 0;
-      padding: 30px;
+      padding: 15px;
     }
 
     /* 🐼 PANDITA */
     .panda {
       position: fixed;
-      top: 15px;
-      left: 20px;
-      font-size: 3.4em;
+      top: 10px;
+      left: 15px;
+      font-size: 2.5em;
       transition: transform 0.4s ease;
+      z-index: 100;
     }
     .panda:hover {
       transform: scale(1.18) rotate(-4deg);
@@ -27,18 +28,19 @@
 
     .saludo {
       position: fixed;
-      top: 85px;
-      left: 25px;
+      top: 65px;
+      left: 15px;
       background: white;
       color: #2d6a4f;
-      padding: 8px 16px;
-      border-radius: 16px;
-      font-size: 0.9em;
+      padding: 6px 12px;
+      border-radius: 12px;
+      font-size: 0.75em;
       opacity: 0;
       transform: translateY(6px);
       transition: opacity 0.3s ease, transform 0.3s ease;
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
       pointer-events: none;
+      z-index: 100;
     }
     .panda:hover + .saludo {
       opacity: 1;
@@ -48,20 +50,23 @@
     /* ESQUINA */
     .esquina {
       position: fixed;
-      top: 20px;
-      right: 20px;
+      top: 10px;
+      right: 15px;
       background: #74c69d;
       color: white;
-      padding: 18px 22px;
-      border-radius: 18px;
+      padding: 12px 14px;
+      border-radius: 14px;
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
       text-align: right;
+      z-index: 100;
+      max-width: 140px;
     }
 
     .tiempo {
-      font-size: 1.4em;
+      font-size: 0.9em;
       font-weight: bold;
       position: relative;
+      line-height: 1.3;
     }
 
     .celebracion {
@@ -70,9 +75,9 @@
       top: 120%;
       background: white;
       color: #2d6a4f;
-      padding: 8px 14px;
-      border-radius: 14px;
-      font-size: 0.8em;
+      padding: 6px 10px;
+      border-radius: 10px;
+      font-size: 0.7em;
       opacity: 0;
       transform: translateY(-6px);
       transition: 0.3s;
@@ -88,49 +93,79 @@
 
     .palabra {
       margin-top: 4px;
-      font-size: 0.95em;
+      font-size: 0.8em;
     }
 
     /* CARD */
     .card {
       background: white;
-      padding: 40px;
-      border-radius: 22px;
+      padding: 25px 20px;
+      border-radius: 20px;
       max-width: 650px;
-      margin: 120px auto;
+      margin: 100px auto 30px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.18);
       text-align: center;
     }
 
-    h1 { font-size: 2.3em; color: #2d6a4f; }
-    h2 { margin-top: 35px; font-size: 1.45em; color: #40916c; }
-    p { font-size: 1.05em; line-height: 1.6; }
+    h1 { 
+      font-size: 1.8em; 
+      color: #2d6a4f;
+      margin-bottom: 15px;
+    }
+    
+    h2 { 
+      margin-top: 30px; 
+      font-size: 1.25em; 
+      color: #40916c;
+    }
+    
+    p { 
+      font-size: 1em; 
+      line-height: 1.6;
+      margin: 15px 0;
+    }
 
-    ul { text-align: left; margin-top: 15px; }
-    li { margin-bottom: 6px; }
+    ul { 
+      text-align: left; 
+      margin: 15px auto;
+      padding-left: 20px;
+      max-width: 400px;
+    }
+    
+    li { 
+      margin-bottom: 8px;
+      font-size: 0.95em;
+    }
 
     button {
       margin-top: 20px;
-      padding: 12px 30px;
+      padding: 12px 25px;
       border-radius: 14px;
       border: none;
       background: #52b788;
       color: white;
-      font-size: 1em;
+      font-size: 0.95em;
       cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    button:active {
+      transform: scale(0.95);
     }
 
     .razon {
       margin-top: 20px;
-      font-size: 1.1em;
+      font-size: 1em;
       color: #2d6a4f;
       transition: opacity 0.6s ease;
+      padding: 0 10px;
     }
 
     .romantica {
-      margin: 30px 0;
+      margin: 25px 0;
       font-style: italic;
       color: #2f7f5f;
+      font-size: 1.05em;
     }
 
     .poetica {
@@ -140,54 +175,68 @@
     }
 
     .motivadora-final {
-      margin-top: 40px;
+      margin-top: 35px;
       font-size: 1em;
       opacity: 0.9;
     }
 
     audio {
-      margin-top: 25px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 350px;
     }
 
     /* CARRUSEL */
-    .carousel {
-      display: flex;
-      gap: 15px;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      margin-top: 20px;
-    }
-    .carousel::-webkit-scrollbar { display: none; }
-
-    .carousel img {
-      width: 220px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 18px;
-      scroll-snap-align: center;
-      transition: transform 0.5s ease;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    }
-    .carousel img:hover { transform: scale(1.05); }
     .carousel-container {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       margin-top: 20px;
+      gap: 8px;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding: 10px 0;
+      flex: 1;
+      max-width: calc(100vw - 120px);
+    }
+    
+    .carousel::-webkit-scrollbar { 
+      display: none; 
+    }
+
+    .carousel img {
+      width: 180px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 16px;
+      scroll-snap-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+    
+    .carousel img:hover { 
+      transform: scale(1.03);
     }
 
     .nav {
       background: #74c69d;
       border: none;
       color: white;
-      font-size: 1.4em;
-      padding: 10px 14px;
+      font-size: 1.2em;
+      padding: 10px 12px;
       border-radius: 50%;
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.2s ease, background 0.2s ease;
+      flex-shrink: 0;
     }
 
     .nav:hover {
@@ -195,13 +244,10 @@
       background: #52b788;
     }
 
-    .nav.left {
-      margin-right: 10px;
+    .nav:active {
+      transform: scale(0.95);
     }
 
-    .nav.right {
-      margin-left: 10px;
-    }
     #lluvia span {
       position: fixed;
       top: -20px;
@@ -209,6 +255,7 @@
       animation: caer linear forwards;
       opacity: 0.8;
       pointer-events: none;
+      z-index: 50;
     }
 
     @keyframes caer {
@@ -218,6 +265,94 @@
       }
     }
 
+    /* RESPONSIVE MOBILE */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .panda {
+        font-size: 2em;
+        top: 8px;
+        left: 10px;
+      }
+
+      .saludo {
+        top: 50px;
+        left: 10px;
+        font-size: 0.7em;
+        padding: 5px 10px;
+      }
+
+      .esquina {
+        top: 8px;
+        right: 10px;
+        padding: 10px 12px;
+        font-size: 0.85em;
+      }
+
+      .tiempo {
+        font-size: 0.75em;
+      }
+
+      .palabra {
+        font-size: 0.7em;
+      }
+
+      .card {
+        padding: 20px 15px;
+        margin: 85px auto 20px;
+      }
+
+      h1 {
+        font-size: 1.5em;
+      }
+
+      h2 {
+        font-size: 1.1em;
+        margin-top: 25px;
+      }
+
+      p {
+        font-size: 0.95em;
+      }
+
+      li {
+        font-size: 0.9em;
+      }
+
+      .carousel {
+        max-width: calc(100vw - 100px);
+        gap: 10px;
+      }
+
+      .carousel img {
+        width: 150px;
+        height: 200px;
+      }
+
+      .nav {
+        font-size: 1em;
+        padding: 8px 10px;
+      }
+
+      button {
+        font-size: 0.9em;
+        padding: 10px 20px;
+      }
+    }
+
+    /* TABLETS */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .card {
+        margin: 110px auto 30px;
+      }
+
+      .carousel img {
+        width: 160px;
+        height: 220px;
+      }
+    }
 
   </style>
 </head>
@@ -277,21 +412,20 @@
       <button class="nav left" onclick="mover(-1)">◀</button>
 
       <div class="carousel" id="carousel">
-        <img src="foto1.jpg">
-        <img src="foto2.jpg">
-        <img src="foto3.jpg">
-        <img src="foto4.jpg">
-        <img src="foto5.jpg">
-        <img src="foto6.jpg">
-        <img src="foto7.jpg">
-        <img src="foto8.jpg">
-        <img src="foto9.jpg">
-        <img src="foto10.jpg">
+        <img src="foto1.jpg" alt="Momento 1">
+        <img src="foto2.jpg" alt="Momento 2">
+        <img src="foto3.jpg" alt="Momento 3">
+        <img src="foto4.jpg" alt="Momento 4">
+        <img src="foto5.jpg" alt="Momento 5">
+        <img src="foto6.jpg" alt="Momento 6">
+        <img src="foto7.jpg" alt="Momento 7">
+        <img src="foto8.jpg" alt="Momento 8">
+        <img src="foto9.jpg" alt="Momento 9">
+        <img src="foto10.jpg" alt="Momento 10">
       </div>
 
       <button class="nav right" onclick="mover(1)">▶</button>
     </div>
-
 
     <div class="poetica">
       Este día también puede ser amable 🌞🍃
@@ -354,9 +488,10 @@
       }, 300);
     }
     otroMotivo();
+
     // 📸 CARRUSEL
     const carousel = document.getElementById("carousel");
-    const scrollAmount = 240;
+    const scrollAmount = 190;
 
     function mover(direccion) {
       carousel.scrollBy({
@@ -364,6 +499,7 @@
         behavior: "smooth"
       });
     }
+
     // 🌿 LLUVIA SUAVE
     const simbolos = ["💚", "🌿", "🍃", "🤍"];
 
@@ -379,11 +515,9 @@
     }
 
     setInterval(crearLluvia, 800);
-
-
   </script>
-<div id="lluvia"></div>
+  
+  <div id="lluvia"></div>
 
 </body>
 </html>
-
